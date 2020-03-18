@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h2 style="text-align: center;"> Add Bishopric Meeting Form</h2>
+<h4 style="text-align: center;"> Create New Bishopric Meeting Agenda</h4>
+<p style="text-align: center;">
+    <form action="" method="POST">
+        <p>
+            {{form.meet_date.label}} <br>
+            {{form.meet_date}}
+        </p>
+        <p>
+            {{form.thought.label}} <br>
+            {{form.thought}}
+        </p>
+        <p>
+            {{form.agenda.label}} <br>
+            {{form.agenda   }}
+        </p>    
+    </form>
+</p>
 
 {% endblock %}

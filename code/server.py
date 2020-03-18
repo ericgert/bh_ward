@@ -10,7 +10,7 @@ def home():
     return render_template("home.html")
 
 
-@app.route('/newbm')
+@app.route('/newbm', methods=['GET', 'POST'])
 def newbm():
     form = BmForm()
     return render_template("newbm.html", form=form)
