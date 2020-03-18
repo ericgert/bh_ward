@@ -8,8 +8,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Login')
 
 class BmForm(FlaskForm):
-    meet_date = DateField(label='Meeting Date'
-    , default='{}'.format(datetime.now().strftime('%Y-%m-%d')))
+    meet_date = DateField(label='Meeting Date', default='{}'.format(datetime.now().strftime('%Y-%m-%d')))
     thought = StringField('Spritual Thought Assignment')
     agenda = TextAreaField('Agenda Items')
     submit = SubmitField('Save')
