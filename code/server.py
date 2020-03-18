@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, flash, for_url
+from flask import Flask, render_template, request, redirect, flash, url_for
 from forms import BmForm
 
 app = Flask(__name__)
@@ -17,7 +17,7 @@ def newbm():
         result = request.form
         print(result)
         flash('Agenda Created Succesfuly')
-        return redirect(for_url('home'))
+        return redirect(url_for('home'))
     return render_template("newbm.html", form=form)
 
 
