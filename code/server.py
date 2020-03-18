@@ -16,9 +16,9 @@ def newbm():
     if form.is_submitted():
         result = request.form
         print(result)
-        flash('Agenda Created Succesfuly')
-        return redirect(url_for('home'))
-    return render_template("newbm.html", form=form)
+        message = 'New Bishopric Meeting Agenda Created Successfully'
+        return render_template('success.html', message=message)
+    return render_template("newbm.html", form=form) 
 
 
 if __name__ == '__main__':
