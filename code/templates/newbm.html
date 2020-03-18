@@ -2,7 +2,7 @@
 {% block content %}
 
 <h4 style="text-align: center;"> Create New Bishopric Meeting Agenda</h4>
-<p style="text-align: center;">
+<div style="text-align: center;">
     <form action="" method="POST">
         <p>
             {{form.meet_date.label}} <br>
@@ -16,7 +16,10 @@
             {{form.agenda.label}} <br>
             {{form.agenda   }}
         </p>    
+        <p>
+            {{form.submit()}}
+        </p>
     </form>
-</p>
+</div>
 
 {% endblock %}

@@ -5,10 +5,12 @@ from datetime import datetime
 class LoginForm(FlaskForm):
     username = StringField('Username')
     password = PasswordField('Password')
-    login_submit = SubmitField('Login')
+    submit = SubmitField('Login')
 
 class BmForm(FlaskForm):
-    meet_date = DateField('{}'.format(datetime.now().strftime('%Y-%m-%d')))
+    meet_date = DateField(label='Meeting Date'
+    , default='{}'.format(datetime.now().strftime('%Y-%m-%d')))
     thought = StringField('Spritual Thought Assignment')
     agenda = TextAreaField('Agenda Items')
+    submit = SubmitField('Save')
     
